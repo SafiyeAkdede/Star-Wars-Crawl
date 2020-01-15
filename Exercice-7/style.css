@@ -2,29 +2,72 @@ body{
     background-image:url(images/fond2.jpg);
     color:yellow;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    text-align: center;
+    position: relative;
 }
 
-
-
-
-  .yourElement {
-    animation-duration: 10s;
-    animation-delay: 0s;
+/*section animation logo*/
+  img { 
+    animation-duration:10s;
     animation-iteration-count:1;
-    animation-name: hidden2;
+    animation-name: bounceOut;
+    opacity: 0;
+    animation-delay:10s;
+    margin-top: 170px;
+    
+   
   }
 
-  @keyframes hidden2{
-      0% {opacity: 100;}
-      80%{opacity: 50;}
-      90%{opacity: 0;}
+  @keyframes bounceOut {
+      0% {transform: scale(2); opacity: 0;}
+      16%{opacity: 1;}
+      80%{opacity: 1;}
+      100%{opacity: 0; 
+            transform: scale(0.3);}
   }
 
+
+  /*animation far far away*/
+  
   .fadeOut {
-    animation-duration: 1s;
-    animation-delay: 2s;
-    animation-iteration-count: 1;
-    animation-name: hidden2;
+    color:rgb(75,213,238);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    line-height: 1.5;
+    position: absolute;
+    top: 200px;
+    left: 450px;
+    opacity: 0;
+    animation-name: fade-in-out;
+    -webkit-animation: fade-in-out 6s linear;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 5
   }
 
- 
+  @keyframes fade-in-out {
+    0% {opacity: 0;}
+    16 {opacity: 1;}
+    84% {opacity: 1;}
+    100%{opacity: 0;}
+}
+
+  /*animation du text + positionnement*/
+
+  .text{
+    width: 500px;
+    margin: auto;
+  }
+
+  p{
+      text-align: justify !important;
+  }
+
+  h2{
+    text-align: center;
+  }
+
+  h3{
+       text-align: center;
+  }
+
+  
