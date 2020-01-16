@@ -12,8 +12,8 @@ body{
     animation-iteration-count:1;
     animation-name: bounceOut;
     opacity: 0;
-    animation-delay:10s;
-    margin-top: 170px;
+    animation-delay:8s;
+    margin-top: 250px;
     
    
   }
@@ -32,29 +32,29 @@ body{
   .fadeOut {
     color:rgb(75,213,238);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 48px;
+    font-size: 68px;
+    text-align: justify;
     line-height: 1.5;
     position: absolute;
     top: 200px;
     left: 450px;
     opacity: 0;
-    animation-name: fade-in-out;
-    -webkit-animation: fade-in-out 6s linear;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-delay: 5
+    animation: fade-in-out;
+    animation-duration: 4s;
+    animation-delay: 2s;
   }
 
   @keyframes fade-in-out {
     0% {opacity: 0;}
-    16 {opacity: 1;}
+    16% {opacity: 1;}
     84% {opacity: 1;}
     100%{opacity: 0;}
 }
 
-  /*animation du text + positionnement*/
+  /* text positionnement*/
 
   .text{
-    width: 500px;
+    width: 1200px;
     margin: auto;
   }
 
@@ -70,4 +70,49 @@ body{
        text-align: center;
   }
 
+  /*animation text*/
+
+  #board {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    transform: perspective(300px) rotateX(25deg);
+    transform-origin: 50% 100%;
+    text-align: justify;
+    position: absolute;
+    margin-left: -9em;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 350%;
+    height: 70em;
+    width: 18em;
+    bottom: -80%;
+    left: 50%;
+   
+  }
   
+  #board:after {
+    position: absolute;
+    content: ' ';
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  
+  #content {
+    animation: scroll 100s linear 12s;
+    position: absolute;
+    top: 100%;
+  }
+  
+  #title, #subtitle {
+    text-align: center;
+  }
+  
+  @keyframes scroll {
+      0% {
+          top: 100%;
+      }
+      100% {
+          top: -170%;
+      }
+  }
